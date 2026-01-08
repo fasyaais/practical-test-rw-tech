@@ -1,6 +1,7 @@
 #include <Arduino.h>
 #include "RW_DHT11.h"
 
+// Melakukan pemanggilan dari library dht11
 RW_DHT11 dht(4);
 
 void setup() {
@@ -9,7 +10,6 @@ void setup() {
 }
 
 void loop() {
-    Serial.println("LOOP HIT");
   if(!dht.read()){
     Serial.println("FAILED");
   }
