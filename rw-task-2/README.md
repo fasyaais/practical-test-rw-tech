@@ -1,5 +1,5 @@
-# **TASK 2** LED Controller 
-Pada tugas ini dibuat dengan menggunakna konsep dari OOP supaya kode yang dibuat tidak ulang. OOP memungkinkan untuk membuat kode lebih rapi dan bersih dikarenakan OOP mengatur konsep dari _reusable_.
+# **TASK 2** Management Task
+Pada tugas ini dibuat untuk menyelesaikan permasalahan dari permasalahan pembacaan sensor yang menunggu .Pada kasus ini menggunakan  protokol i2c sebagai contoh dari bus yang sama.
 
 > Task ini dibuat menggunakan PlatformIo.
 
@@ -32,6 +32,15 @@ pengiriman.
 
 ![alt Schematic LED](./img/image.png)
 
+|SENSOR| ADDRESS|
+|-|-|
+|MPU|0x69|
+|RTC|0x68|
+
+Secara default sensor MPU menggunakan alamat `0x68` sama seperti rtc, tetapi sensor MPU memiliki pin untuk merubah addr menjadi `0x69` ketika pin `AD0` diberikan tegangan.
+
 ## How to works
 
-Pada task ini digunkan 2 sensor I2C MPU6050 & RTC, dikarenakna constraint harus memiliki 5 sensor maka dilakukan insiasi sebanyak 5 sensor
+Pada task ini digunkan 2 sensor I2C MPU6050 & RTC, dikarenakna constraint harus memiliki 5 sensor maka dilakukan insiasi sebanyak 5 sensor. Tugas ini menggunakaa RTOS untuk melakukan managemen task.
+
+
