@@ -3,7 +3,11 @@
 #include "RTCController.h"
 #include <ArduinoJson.h>
 
+/**
+ * Membuat sebuah variabel yang akan menyimpan data
+ */
 JsonDocument sharedDataBuffer;
+// Untuk mengatasi permasalahan data 
 SemaphoreHandle_t dataMutex;
 
 MPUController gyroSensor;
